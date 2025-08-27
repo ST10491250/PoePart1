@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
+        }
+    header, nav, main, footer { 
+        padding: 16px; 
+    }
+    header { 
+        background: #0f172a; 
+        color: #fff; 
+    }
+    header .brand {
+         display: flex; 
+         align-items: center; 
+         gap: 12px; 
+        }
+    header img { height: 40px; 
+        width: 100px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+    nav a {
+         margin-right: 12px; 
+         color: #e2e8f0; 
+         text-decoration: none; 
+        }
+    nav a:hover { 
+        text-decoration: underline;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="brand">
+            <!-- Replace with your logo image if you have one -->
+            <img src="Images/TyreXpress.png" alt="TyreXpress logo" />
+            <div>
+              <h1 style="margin: 0;">TyreXpress</h1>
+              <p style="margin: 0;" class="muted">Quality tyres. Fast service. Fair prices.</p>
+            </div>
+          </div>
+          <nav aria-label="Primary Navigation">
+            <a href="index.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="tyres.html">Tyres</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Services section using headings, paragraphs, and images -->
+      <section style="padding: 32px 16px; background-color: #fff;">
+        <h2 style="text-align: center;">Our Services</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
+          
+          <figure style="text-align: center;">
+            <img src="Images/Tire fitment.webp" alt="Tire fitment" style="width: 100%; max-width: 300px; border-radius: 6px;" />
+            <figcaption><strong>Tyre Fitment</strong> – Quick, clean, and professional service.</figcaption>
+          </figure>
+      
+          <figure style="text-align: center;">
+            <img src="Images/Wheel allignment.webp" alt="Wheel balancing" style="width: 100%; max-width: 300px; border-radius: 6px;" />
+            <figcaption><strong>Wheel Balancing</strong> – Smooth ride, less wear, more safety.</figcaption>
+          </figure>
+      
+          <figure style="text-align: center;">
+            <img src="Images/Tire Repaires.webp" alt="Puncture repair" style="width: 100%; max-width: 300px; border-radius: 6px;" />
+            <figcaption><strong>Puncture Repairs</strong> – Fast fixes while you wait.</figcaption>
+          </figure>
+      
+          <figure style="text-align: center;">
+            <img src="Images/Wheel Allignment - Copy.webp" alt="Wheel alignment" style="width: 100%; max-width: 300px; border-radius: 6px;" />
+            <figcaption><strong>Wheel Alignment</strong> – Keep your steering straight and tyres lasting longer.</figcaption>
+          </figure>
+      
+        </div>
+      </section>
+
+      <div style="background: lightblue;">
+        <p style="margin-top: 15%; margin-left: 35%; width: 100%; ">&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
+    
+      </div>
+</body>
+</html>

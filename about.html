@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            line-height: 1.6; 
+        }
+    header, nav, main, footer { 
+        padding: 16px; 
+    }
+    header { 
+        background: #0f172a; 
+        color: #fff; 
+    }
+    header .brand {
+         display: flex; 
+         align-items: center; 
+         gap: 12px; 
+        }
+    header img { height: 40px; 
+        width: 100px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+    nav a {
+         margin-right: 12px; 
+         color: #e2e8f0; 
+         text-decoration: none; 
+        }
+    nav a:hover { 
+        text-decoration: underline;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <div class="brand">
+            <!-- Replace with your logo image if you have one -->
+            <img src="Images/TyreXpress.png" alt="TyreXpress logo" />
+            <div>
+              <h1 style="margin: 0;">TyreXpress</h1>
+              <p style="margin: 0;" class="muted">Quality tyres. Fast service. Fair prices.</p>
+            </div>
+          </div>
+          <nav aria-label="Primary Navigation">
+            <a href="index.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="tyres.html">Tyres</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- About section -->
+    <section id="about" aria-labelledby="about-title" style="margin-top: 32px;">
+        <h2 id="about-title">About TyreXpress</h2>
+      
+        <h3>About the Founder</h3>
+        <p>TyreXpress was founded by Sipho Mthembu, a seasoned mechanic with over 15 years of experience in the automotive industry. Born and raised in Soweto, Sipho started the business with a simple goal: to offer honest, reliable tyre services to everyday South Africans. His passion for road safety and community upliftment drives everything we do.</p>
+      
+        <h3>Our Mission</h3>
+        <p>We believe that tyre care shouldn’t be complicated or expensive. Our mission is to provide fast, friendly service with transparent pricing, so you can drive with confidence and peace of mind.</p>
+      
+        <h3>Community Involvement</h3>
+        <p>TyreXpress is more than just a tyre shop — we’re part of the community. We sponsor local soccer teams, support youth driving safety workshops, and offer free tyre checks during festive seasons to help reduce road accidents. We’re proud to give back where we can.</p>
+      
+        <h3>Our Services</h3>
+        <p>We offer a full range of tyre services including puncture repairs, wheel balancing, alignment, and tyre replacements. We stock trusted brands like Dunlop, Goodyear, and Continental, and we’re always happy to help you choose the right fit for your car and budget.</p>
+      
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>✅ Honest pricing — no hidden costs</li>
+          <li>✅ Skilled, friendly technicians</li>
+          <li>✅ Fast turnaround times</li>
+          <li>✅ Free pressure checks and safety advice</li>
+          <li>✅ Locally owned and community-driven</li>
+        </ul>
+      
+        <h3>Visit Us</h3>
+        <p>Whether you’re popping in for a quick check or need a full tyre replacement, we’re here to help. Our shop is easy to find and always welcoming.</p>
+        <p>
+          <a href="https://maps.example.com/tyreXpress" target="_blank" rel="noopener">📍 Find us on Maps</a>
+        </p>
+      </section>
+
+      <div style="background: lightblue;">
+        <p style="margin-top: 15%; margin-left: 35%; width: 100%; ">&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
+    
+      </div>
+</body>
+</html>
