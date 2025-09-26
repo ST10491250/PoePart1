@@ -4,38 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body { 
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
-            margin: 0; 
-            line-height: 1.6; 
-        }
-    header, nav, main, footer { 
-        padding: 16px; 
-    }
-    header { 
-        background: #0f172a; 
-        color: #fff; 
-    }
-    header .brand {
-         display: flex; 
-         align-items: center; 
-         gap: 12px; 
-        }
-    header img { height: 40px; 
-        width: 100px; 
-        object-fit: cover; 
-        border-radius: 8px; 
-    }
-    nav a {
-         margin-right: 12px; 
-         color: #e2e8f0; 
-         text-decoration: none; 
-        }
-    nav a:hover { 
-        text-decoration: underline;
-         }
-    </style>
+    <link rel="Stylesheet" href="style.css">
+   
 </head>
 <body>
     <header>
@@ -60,79 +30,77 @@
 
       <!-- Contact section with basic details and links -->
 
- 
+ <!-- Contact Form Section -->
+<section class="contact-form-section">
+  <form class="contact-form" method="post">
+    <h1>Contact Us</h1>
 
-      <form method="post" style="width:50%; border:solid; height:180vh; margin-left: 25%; margin-top: 5%;">
-        <h1 style="margin-left:10%">CONTACT US</h1>
-        <br>
-        <label for="fname" style="margin-left:25%;">First name:</label><br>
-        <input type="text" name="username" placeholder="Name"  style="margin-left:25%; height:30px; border-top:none; border-left:none; border-right:none; width: 50%" required/>
-        <br><br><br>
-        <label for="fname" style="margin-left:25%;">Last Name:</label><br>     
-        <input type="text" name="password" placeholder="last name"  style="margin-left:25%; height:30px; border-top:none; border-left:none; border-right:none; width: 50%" required/>
-        <br><br>
-        <label for="fname" style="margin-left:25%;">Age:</label><br>
-        <input type="text" name="username" placeholder="age"  style="margin-left:25%; height:30px; border-top:none; border-left:none; border-right:none; width: 50%" required/>
-        <br><br>      
-        <label for="Gender" style="margin-left:25%;"> Gender:</label>
-         <select style="margin-left:2%;">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-         </select>
-        <br>
-        <p style="margin-left:25%">What's your reason for contacting us?</p><br>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"  style="margin-left:25%;">
-        <label for="vehicle1"  style="margin-left:2%;"> Need help</label><br>      
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"  style="margin-left:25%;">
-        <label for="vehicle2"  style="margin-left:2%;">Want to suggest something</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"  style="margin-left:25%;">
-        <label for="vehicle3"  style="margin-left:2%;"> Complain</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"  style="margin-left:25%;">
-        <label for="vehicle3"  style="margin-left:2%;"> Ask about a order</label><br>
-        <br><br>
-        <label for="fname" style="margin-left:25%;">email address:</label><br>
-        <input type="email" name="username" placeholder="email"  style="margin-left:25%; height:30px; border-top:none; border-left:none; border-right:none; width: 50%" required/>
-        <br><br>
-        <label for="fname" style="margin-left:25%;">Phone number:</label><br>
-        <input type="text" name="username" placeholder="+27"  style="margin-left:25%; height:30px; border-top:none; border-left:none; border-right:none; width: 50%" required/>
-        <br>
-        <p style="margin-left:25%;">Please write an entry</p>
-        <br>
-        <textarea id="Subject" name="Name" placeholder="Write your entry"  style="height: 300px;width: 450px; margin-left:25%;"></textarea>
-        <br><br><br>       
-        <input type="submit" value=" submit" style="width: 150px; height:30px; margin-left: 25%;"/>
-        </form>
-
-
-    <section id="contact" aria-labelledby="contact-title" style="margin-top: 32px; margin-left: 35%; background: rgb(253, 252, 252); width: 300px;box-shadow: #0f172a;">
-        <h2 id="contact-title">Contact Us</h2>
-        <p>
-          <strong>Phone:</strong> <a href="tel:+27110000000">+27 11 000 0000</a><br>
-          <strong>Email:</strong> <a href="mailto:hello@tyrexpress.co.za">hello@tyrexpress.co.za</a><br>
-          <strong>Address:</strong> 123 Main Road, Johannesburg, South Africa
-        </p>
-        <p>
-          Need a quote fast? <a href="mailto:hello@tyrexpress.co.za?subject=Tyre%20Quote&body=Hi%20TyreXpress%2C%0AHere%27s%20my%20tyre%20size%3A%20_____%0AMy%20vehicle%3A%20_____%0AWhen%20I%20can%20come%20in%3A%20_____">Email us your tyre size</a> and we’ll respond ASAP.
-        </p>
-      </section>
-    </main>
-
-
-      <!-- Footer -->
-  <footer>
-    <div class="container">
-      
-      <p class="muted">Follow us: 
-        <a href="#" style="color:#cbd5e1;">Facebook</a> · 
-        <a href="#" style="color:#cbd5e1;">Instagram</a> · 
-        <a href="#" style="color:#cbd5e1;">Twitter</a>
-      </p>
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" id="fname" placeholder="First Name" required />
     </div>
-  </footer>
 
-  <div style="background: lightblue;">
-    <p style="margin-top: 15%; margin-left: 35%; width: 100%; ">&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="Last Name" required />
+    </div>
 
-  </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" placeholder="Age" required />
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">
+        <option value="">Select...</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>What's your reason for contacting us?</p>
+      <label><input type="checkbox" name="reason" value="help" /> Need help</label>
+      <label><input type="checkbox" name="reason" value="suggest" /> Want to suggest something</label>
+      <label><input type="checkbox" name="reason" value="complain" /> Complain</label>
+      <label><input type="checkbox" name="reason" value="order" /> Ask about an order</label>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" name="email" id="email" placeholder="you@example.com" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="text" name="phone" id="phone" placeholder="+27" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" placeholder="Write your message..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+  <aside class="contact-info">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> <a href="tel:+27110000000">+27 11 000 0000</a></p>
+    <p><strong>Email:</strong> <a href="mailto:hello@tyrexpress.co.za">hello@tyrexpress.co.za</a></p>
+    <p><strong>Address:</strong> 123 Main Road, Johannesburg, South Africa</p>
+    <p>
+      Need a quote fast? 
+      <a href="mailto:hello@tyrexpress.co.za?subject=Tyre%20Quote&body=Hi%20TyreXpress%2C%0AHere%27s%20my%20tyre%20size%3A%20_____%0AMy%20vehicle%3A%20_____%0AWhen%20I%20can%20come%20in%3A%20_____">Email us your tyre size</a>
+      and we’ll respond ASAP.
+    </p>
+  </aside>
+</section>
+
+
+<footer>
+  <p>&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
+</footer>
 </body>
 </html>
