@@ -767,7 +767,187 @@ text-decoration: underline;
     color: var(--accent);
     font-weight: bold;
   }
-  
+  /* Add to Cart Button Styling */
+button {
+  background-color: #007bff; /* Blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Cart Section Styling */
+#cart {
+  padding: 32px 16px;
+  background-color: #f7f7f7;
+  margin-top: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cart h2 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+#cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-list li {
+  background-color: #fff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cart-list button {
+  background-color: #e74c3c; /* Red for Remove button */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#cart-list button:hover {
+  background-color: #c0392b; /* Darker red */
+}
+
+/* Total Price Styling */
+#total-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Checkout Button Styling */
+#checkout-btn {
+  background-color: #ff7f00; /* Orange */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#checkout-btn:hover {
+  background-color: #e67e22; /* Darker orange */
+}
+
+.error {
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.success-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+}
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black with transparency */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Close button (X) */
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Success message */
+.success-message {
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Form styles */
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+
   /* ------------------------------
      Responsive Design
   ------------------------------ */

@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Meta Description: Summarizes the content of the page -->
+  <meta name="description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. We provide same-day tyre fitting, wheel balancing, and puncture repairs for cars, SUVs, and trucks.">
+  
+  <!-- Meta Keywords (optional but still used by some search engines) -->
+  <meta name="keywords" content="Tyres, Tyre Fitting, Tyre Services, Vehicle Repair, Car Tyres, Tyre Shop, Puncture Repair, Johannesburg">
+  
+  <!-- Author of the website -->
+  <meta name="author" content="TyreXpress">
+
+  <!-- Robots Meta Tag: Controls the behavior of search engine crawlers -->
+  <meta name="robots" content="index, follow">  <!-- "index, follow" means allow search engines to index the page and follow the links -->
+  
+  <!-- Canonical Link: Helps avoid duplicate content issues -->
+  <link rel="canonical" href="https://www.tyrexpress.co.za/">
+
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TyreXpress | Quality Tyre Services">
+  <meta property="og:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta property="og:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta property="og:url" content="https://www.tyrexpress.co.za">
+  <meta property="og:site_name" content="TyreXpress">
+  
+  <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TyreXpress | Quality Tyre Services">
+  <meta name="twitter:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta name="twitter:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta name="twitter:site" content="@TyreXpressZA">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.tyrexpress.co.za/images/favicon.ico" type="image/x-icon">
     <link rel="Stylesheet" href="style.css">
     
 </head>
@@ -28,38 +60,66 @@
         </div>
       </header>
 
-      <!-- Services section using headings, paragraphs, and images -->
-      <section style="padding: 32px 16px; background-color: #fff;">
-        <h2 style="text-align: center;">Our Services</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
-          
-          <figure style="text-align: center;">
-            <img src="Images/Tire fitment.webp" alt="Tire fitment" />
-            <figcaption><strong>Tyre Fitment</strong> – Quick, clean, and professional service.</figcaption>
-          </figure>
-      
-          <figure style="text-align: center;">
-            <img src="Images/Wheel allignment.webp" alt="Wheel balancing"  />
-            <figcaption><strong>Wheel Balancing</strong> – Smooth ride, less wear, more safety.</figcaption>
-          </figure>
-      
-          <figure style="text-align: center;">
-            <img src="Images/Tire Repaires.webp" alt="Puncture repair"  />
-            <figcaption><strong>Puncture Repairs</strong> – Fast fixes while you wait.</figcaption>
-          </figure>
-      
-          <figure style="text-align: center;">
-            <img src="Images/Wheel Allignment - Copy.webp" alt="Wheel alignment"  />
-            <figcaption><strong>Wheel Alignment</strong> – Keep your steering straight and tyres lasting longer.</figcaption>
-          </figure>
-      
-        </div>
-      </section>
+<!-- Services section using headings, paragraphs, and images -->
+<section style="padding: 32px 16px; background-color: #fff;">
+  <h2 style="text-align: center;">Our Services</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
+
+    <!-- Tire Fitment Service -->
+    <figure style="text-align: center;">
+      <img src="Images/Tire fitment.webp" alt="Tire fitment" />
+      <figcaption><strong>Tyre Fitment</strong> – Quick, clean, and professional service.</figcaption>
+      <p><strong>Price: R1200</strong></p> <!-- Price for the service -->
+      <button onclick="addToCart('Tyre Fitment', 1200)">Add to Cart</button> <!-- Add to Cart button -->
+    </figure>
+
+    <!-- Wheel Balancing Service -->
+    <figure style="text-align: center;">
+      <img src="Images/Wheel allignment.webp" alt="Wheel balancing" />
+      <figcaption><strong>Wheel Balancing</strong> – Smooth ride, less wear, more safety.</figcaption>
+      <p><strong>Price: R3000</strong></p> <!-- Price for the service -->
+      <button onclick="addToCart('Wheel Balancing', 3000)">Add to Cart</button> <!-- Add to Cart button -->
+    </figure>
+
+    <!-- Puncture Repairs Service -->
+    <figure style="text-align: center;">
+      <img src="Images/Tire Repaires.webp" alt="Puncture repair" />
+      <figcaption><strong>Puncture Repairs</strong> – Fast fixes while you wait.</figcaption>
+      <p><strong>Price: R2000</strong></p> <!-- Price for the service -->
+      <button onclick="addToCart('Puncture Repairs', 2000)">Add to Cart</button> <!-- Add to Cart button -->
+    </figure>
+
+    <!-- Wheel Alignment Service -->
+    <figure style="text-align: center;">
+      <img src="Images/Wheel Allignment - Copy.webp" alt="Wheel alignment" />
+      <figcaption><strong>Wheel Alignment</strong> – Keep your steering straight and tyres lasting longer.</figcaption>
+      <p><strong>Price: R4000</strong></p> <!-- Price for the service -->
+      <button onclick="addToCart('Wheel Alignment', 4000)">Add to Cart</button> <!-- Add to Cart button -->
+    </figure>
+
+  </div>
+</section>
+
+<!-- Cart Section -->
+<section id="cart" style="padding: 32px 16px; background-color: #f7f7f7; margin-top: 24px;">
+  <h2>Your Cart</h2>
+  <ul id="cart-list">
+    <!-- Items added to the cart will appear here -->
+  </ul>
+  <p id="total-price"><strong>Total Price: R0</strong></p>
+  <button id="checkout-btn" onclick="checkout()" style="padding: 8px 16px; background-color: green; color: white; border: none; cursor: pointer;">Proceed to Checkout</button>
+</section>
 
       
 
       <footer>
         <p>&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
       </footer>
+
+
+
+<script src="Js/Service.js">
+  
+</script>
 </body>
 </html>

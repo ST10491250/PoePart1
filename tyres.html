@@ -3,15 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="Stylesheet" href="style.css">
-    
+    <title>TyreXpress</title>
+    <!-- Meta Description: Summarizes the content of the page -->
+  <meta name="description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. We provide same-day tyre fitting, wheel balancing, and puncture repairs for cars, SUVs, and trucks.">
+  
+  <!-- Meta Keywords (optional but still used by some search engines) -->
+  <meta name="keywords" content="Tyres, Tyre Fitting, Tyre Services, Vehicle Repair, Car Tyres, Tyre Shop, Puncture Repair, Johannesburg">
+  
+  <!-- Author of the website -->
+  <meta name="author" content="TyreXpress">
+
+  <!-- Robots Meta Tag: Controls the behavior of search engine crawlers -->
+  <meta name="robots" content="index, follow">  <!-- "index, follow" means allow search engines to index the page and follow the links -->
+  
+  <!-- Canonical Link: Helps avoid duplicate content issues -->
+  <link rel="canonical" href="https://www.tyrexpress.co.za/">
+
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TyreXpress | Quality Tyre Services">
+  <meta property="og:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta property="og:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta property="og:url" content="https://www.tyrexpress.co.za">
+  <meta property="og:site_name" content="TyreXpress">
+  
+  <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TyreXpress | Quality Tyre Services">
+  <meta name="twitter:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta name="twitter:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta name="twitter:site" content="@TyreXpressZA">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.tyrexpress.co.za/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS -->
 </head>
 <body>
     <header>
         <div class="container">
           <div class="brand">
-            <!-- Replace with your logo image if you have one -->
             <img src="Images/TyreXpress.png" alt="TyreXpress logo" />
             <div>
               <h1 style="margin: 0;">TyreXpress</h1>
@@ -26,87 +56,86 @@
             <a href="contact.html">Contact</a>
           </nav>
         </div>
-      </header>
+    </header>
 
-      <!-- Tyres section with links -->
+    <!-- Tyres section with search and sort options -->
     <section id="products" aria-labelledby="products-title" style="margin-top: 32px;">
         <h2 id="products-title">Popular Tyres</h2>
         <p>We stock trusted brands in multiple sizes. <a href="contact.html">Ask for a quote</a> with your tyre size (e.g., 205/55 R16).</p>
+
+        <!-- Search and Sort Controls -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <input type="text" id="search-bar" placeholder="Search tyres..." oninput="filterProducts()" style="padding: 8px 16px; border-radius: 4px; border: 1px solid #ddd; width: 40%;" />
+            
+            <div style="display: flex; gap: 16px;">
+                <select id="sort-price" onchange="sortByPrice()">
+                    <option value="default">Sort by Price</option>
+                    <option value="low-to-high">Low to High</option>
+                    <option value="high-to-low">High to Low</option>
+                    <option value="mid-range">Mid Range (R2000 - R3000)</option>
+                </select>
+
+                <select id="sort-alphabet" onchange="sortByAlphabet()">
+                    <option value="default">Sort by Name</option>
+                    <option value="asc">A to Z</option>
+                    <option value="desc">Z to A</option>
+                </select>
+            </div>
+        </div>
+
         <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; justify-content: center; margin: 0 auto; padding: 16px; max-width: 1200px;">
-          <figure class="card">
+          <!-- Tyre Product Cards (same as before) -->
+          <figure class="card" data-name="Touring Tyres" data-price="1500">
             <img src="Images/Touring 1.webp" alt="Touring tyre tread close‑up" />
             <figcaption><strong>Touring Tyres</strong> – smooth, quiet ride for city and highway driving.</figcaption>
+            <p><strong>Price: R1500</strong></p>
+            <button onclick="addToCart('Touring Tyres', 1500)">Add to Cart</button>
           </figure>
 
-          <figure class="card">
-            <img src="Images/All-Terrain 2.jfif" alt="Touring tyre tread close‑up" />
-            <figcaption><strong>Touring Tyres</strong> – smooth, quiet ride for city and highway driving.</figcaption>
+          <figure class="card" data-name="All-Terrain Tyres" data-price="2500">
+            <img src="Images/All-Terrain 2.jfif" alt="All-Terrain tyre tread close‑up" />
+            <figcaption><strong>All-Terrain Tyres</strong> – for mixed on/off‑road conditions.</figcaption>
+            <p><strong>Price: R2500</strong></p>
+            <button onclick="addToCart('All-Terrain Tyres', 2500)">Add to Cart</button>
           </figure>
 
-          <figure class="card">
-            <img src="Images/All-Terrain 3.jpg" alt="Touring tyre tread close‑up"/>
-            <figcaption><strong>Touring Tyres</strong> – smooth, quiet ride for city and highway driving.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 4.jpg" alt="Touring tyre tread close‑up"/>
-            <figcaption><strong>Touring Tyres</strong> – smooth, quiet ride for city and highway driving.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 5.jpg" alt="Touring tyre tread close‑up"  />
-            <figcaption><strong>Touring Tyres</strong> – smooth, quiet ride for city and highway driving.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/Performance 2.jfif" alt="Performance tyre tread"  />
+          <figure class="card" data-name="Performance Tyres" data-price="3200">
+            <img src="Images/Performance 2.jfif" alt="Performance tyre tread" />
             <figcaption><strong>Performance Tyres</strong> – extra grip and handling.</figcaption>
+            <p><strong>Price: R3200</strong></p>
+            <button onclick="addToCart('Performance Tyres', 3200)">Add to Cart</button>
           </figure>
 
-          <figure class="card">
-            <img src="Images/Performance 3.jfif" alt="Performance tyre tread"  />
+          <figure class="card" data-name="All-Terrain Tyres" data-price="2800">
+            <img src="Images/All-Terrain 3.jpg" alt="All-Terrain tyre on SUV" />
+            <figcaption><strong>All-Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
+            <p><strong>Price: R2800</strong></p>
+            <button onclick="addToCart('All-Terrain Tyres', 2800)">Add to Cart</button>
+          </figure>
+
+          <figure class="card" data-name="Performance Tyres" data-price="3500">
+            <img src="Images/Performance 4.webp" alt="Performance tyre tread" />
             <figcaption><strong>Performance Tyres</strong> – extra grip and handling.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/Performance 4.webp" alt="Performance tyre tread" " />
-            <figcaption><strong>Performance Tyres</strong> – extra grip and handling.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/Performance 5.jfif" alt="Performance tyre tread" />
-            <figcaption><strong>Performance Tyres</strong> – extra grip and handling.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 1.webp" alt="All‑terrain tyre on SUV" />
-            <figcaption><strong>All‑Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 2.jfif" alt="All‑terrain tyre on SUV"  />
-            <figcaption><strong>All‑Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 3.jpg" alt="All‑terrain tyre on SUV"  />
-            <figcaption><strong>All‑Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 4.jpg" alt="All‑terrain tyre on SUV" style="width: 300px; height: auto; border-radius: 6px;" />
-            <figcaption><strong>All‑Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
-          </figure>
-
-          <figure class="card">
-            <img src="Images/All-Terrain 5.jpg" alt="All‑terrain tyre on SUV"  />
-            <figcaption><strong>All‑Terrain</strong> – for mixed on/off‑road conditions.</figcaption>
+            <p><strong>Price: R3500</strong></p>
+            <button onclick="addToCart('Performance Tyres', 3500)">Add to Cart</button>
           </figure>
         </div>
-      </section>
-
-      <footer>
+    </section>
+ <section id="cart" style="padding: 32px 16px; background-color: #f7f7f7; margin-top: 24px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h2>Your Cart</h2>
+      <ul id="cart-list">
+        <!-- Cart items will be dynamically displayed here -->
+      </ul>
+      <p id="total-price"><strong>Total Price: R0</strong></p>
+      <button id="checkout-btn" onclick="checkout()" style="padding: 12px 20px; background-color: #ff7f00; color: white; border: none; cursor: pointer; border-radius: 6px; width: 100%;">Proceed to Checkout</button>
+    </section>
+    <footer>
         <p>&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
-      </footer>
+    </footer>
+
+    <script src="Js/tyres.js">
+      
+      
+    </script>
 </body>
 </html>

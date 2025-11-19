@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <!-- Title Tag: Essential for SEO -->
+  <title>TyreXpress | Quality Tyre Services</title>
+
+  <!-- Meta Description: Summarizes the content of the page -->
+  <meta name="description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. We provide same-day tyre fitting, wheel balancing, and puncture repairs for cars, SUVs, and trucks.">
+  
+  <!-- Meta Keywords (optional but still used by some search engines) -->
+  <meta name="keywords" content="Tyres, Tyre Fitting, Tyre Services, Vehicle Repair, Car Tyres, Tyre Shop, Puncture Repair, Johannesburg">
+  
+  <!-- Author of the website -->
+  <meta name="author" content="TyreXpress">
+
+  <!-- Robots Meta Tag: Controls the behavior of search engine crawlers -->
+  <meta name="robots" content="index, follow">  <!-- "index, follow" means allow search engines to index the page and follow the links -->
+  
+  <!-- Canonical Link: Helps avoid duplicate content issues -->
+  <link rel="canonical" href="https://www.tyrexpress.co.za/">
+
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TyreXpress | Quality Tyre Services">
+  <meta property="og:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta property="og:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta property="og:url" content="https://www.tyrexpress.co.za">
+  <meta property="og:site_name" content="TyreXpress">
+  
+  <!-- Twitter Card Meta Tags (for Twitter sharing) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TyreXpress | Quality Tyre Services">
+  <meta name="twitter:description" content="TyreXpress offers quality tyres, fast fitting, and reliable vehicle services. Get your tyres fitted today.">
+  <meta name="twitter:image" content="https://www.tyrexpress.co.za/images/hero-image.jpg">
+  <meta name="twitter:site" content="@TyreXpressZA">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.tyrexpress.co.za/images/favicon.ico" type="image/x-icon">
     <link rel="Stylesheet" href="style.css">
 </head>
 
@@ -37,10 +71,47 @@
         <p>We supply and fit quality tyres for cars, SUVs, and light trucks. Same‑day fitting, wheel balancing, and puncture repairs. Visit us for a quick, reliable service.</p>
 
         <p>Whether you’re cruising in a Golf GTI or hustling in a Quantum, we’ve got the grip to keep you rolling. No skrr skrr — just smooth rides and solid service.</p>
+<p>
+  <!-- The Book a Fitting Button -->
+  <a href="javascript:void(0);" id="bookFittingBtn">Book a fitting →</a>
+</p>
 
-        <p>
-          <a href="contact.html">Book a fitting →</a>
-        </p>
+<!-- Modal for booking a fitting -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <!-- Close button (X) -->
+    <span id="closeModal" class="close-btn">&times;</span>
+    
+    <h2>Book Your Fitting Appointment</h2>
+    
+    <!-- Booking Form -->
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="vehicleType">Vehicle Type</label>
+        <input type="text" id="vehicleType" name="vehicleType" placeholder="Enter your vehicle type" required>
+      </div>
+      <div class="form-group">
+        <label for="fittingDate">Preferred Fitting Date</label>
+        <input type="date" id="fittingDate" name="fittingDate" required>
+      </div>
+      <div class="form-group">
+        <label for="fittingTime">Preferred Fitting Time</label>
+        <input type="time" id="fittingTime" name="fittingTime" required>
+      </div>
+      <div class="form-group">
+        <label for="contactInfo">Your Contact Info</label>
+        <input type="email" id="contactInfo" name="contactInfo" placeholder="Email or Phone" required>
+      </div>
+      <button type="submit" id="submitBooking">Submit Booking</button>
+    </form>
+    
+    <!-- Success message after form submission -->
+    <div id="successMessage" class="success-message" style="display:none;">
+      <p>Your fitting has been successfully booked!</p>
+    </div>
+  </div>
+</div>
+
       </div>
       <!-- Replace the image source with your own photo -->
       <img src="images/Shop 2.png" alt="Tyre technician fitting a new tyre in the workshop" />
@@ -50,5 +121,10 @@
     <footer>
       <p>&copy; <span id="year"></span> TyreXpress. All rights reserved.</p>
     </footer>
+<script src="Js/Index.js">
+
+</script>
+
+
 </body>
 </html>
